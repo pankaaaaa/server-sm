@@ -1,0 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GITHUB_CALLBACK_URL = exports.GITHUB_CLIENT_SECRET = exports.GITHUB_CLIENT_ID = exports.GOOGLE_CLIENT_ID = exports.GOOGLE_CLIENT_SECRET = exports.GOOGLE_CALLBACK_URL = exports.GOOGLE_SESSION_SECRET = exports.REDIS_HOST = exports.REDIS_PASSWORD = exports.PORT = exports.CLIENT_URL = exports.SECRET = void 0;
+const { env } = process;
+exports.SECRET = env.SECRET, exports.CLIENT_URL = env.CLIENT_URL, exports.PORT = env.PORT, exports.REDIS_PASSWORD = env.REDIS_PASSWORD, exports.REDIS_HOST = env.REDIS_HOST, exports.GOOGLE_SESSION_SECRET = env.GOOGLE_SESSION_SECRET, exports.GOOGLE_CALLBACK_URL = env.GOOGLE_CALLBACK_URL, exports.GOOGLE_CLIENT_SECRET = env.GOOGLE_CLIENT_SECRET, exports.GOOGLE_CLIENT_ID = env.GOOGLE_CLIENT_ID, exports.GITHUB_CLIENT_ID = env.GITHUB_CLIENT_ID, exports.GITHUB_CLIENT_SECRET = env.GITHUB_CLIENT_SECRET, exports.GITHUB_CALLBACK_URL = env.GITHUB_CALLBACK_URL;
+//# sourceMappingURL=variables.js.map

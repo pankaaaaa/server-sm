@@ -1,20 +1,38 @@
+// {
+//   "compilerOptions": {
+//     "module": "CommonJS",
+//     "target": "ES2016",
+//     "noImplicitAny": false,
+//     "removeComments": true,
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "rootDir": "./src",
+//     "outDir": "./dist",
+//     "baseUrl": ".",
+//     "paths": {
+//       "#/*": ["./src/*"]
+//     }
+//   },
+//   "exclude": ["node_modules", "dist"],
+//   "include": ["src/**/*"]
+// }
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "ES2016",
-    "noImplicitAny": false,
-    "removeComments": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "baseUrl": ".",
-    "paths": {
-      "#/*": ["./src/*"]
-    }
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es6",
+      "noImplicitAny": false,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",
+      "baseUrl": ".",
+          "paths": {
+             "#/*": ["./src/*","./custom.d.ts"]
+          }
   },
-  "exclude": ["node_modules", "dist"],
-  "include": ["src/**/*"]
-}
+  "include": ["./src/**/*"]
+  }
+

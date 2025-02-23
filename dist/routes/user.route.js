@@ -1,0 +1,23 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const user_1 = require("../controllers/user");
+const authMiddleware_1 = require("../middleware/authMiddleware");
+const express_1 = require("express");
+const router = (0, express_1.Router)();
+router.get("/dashboard", authMiddleware_1.authMiddleware, user_1.getDashboardData);
+router.get("/dashboard/messages-send-data", authMiddleware_1.authMiddleware, user_1.getDashboardMessageSentData);
+router.get("/dashboard/post-vote-data", authMiddleware_1.authMiddleware, user_1.getDashboardPostActivityData);
+router.get("/get-notification", authMiddleware_1.authMiddleware, user_1.getMyNotifications);
+router.get("/get-notification-count", authMiddleware_1.authMiddleware, user_1.getMyNotificationsCount);
+router.put("/seen-notification", authMiddleware_1.authMiddleware, user_1.seenNotification);
+router.get("/get-peoples", authMiddleware_1.authMiddleware, user_1.getAllPeoples);
+router.get("/recommended-user", authMiddleware_1.authMiddleware, user_1.getRecommendedUser);
+router.post("/follow-user/:id", authMiddleware_1.authMiddleware, user_1.followUser);
+router.get("/is-follow/:id", authMiddleware_1.authMiddleware, user_1.isFollow);
+router.get("/search-user", authMiddleware_1.authMiddleware, user_1.serachUser);
+router.get("/post/:userId", authMiddleware_1.authMiddleware, user_1.getUserPosts);
+router.get("/get-following-list/:id", authMiddleware_1.authMiddleware, user_1.getUserFollowingList);
+router.get("/get-followers-list/:id", authMiddleware_1.authMiddleware, user_1.getUserFollowersList);
+router.get("/:id", authMiddleware_1.authMiddleware, user_1.getUser);
+exports.default = router;
+//# sourceMappingURL=user.route.js.map
