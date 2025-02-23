@@ -6,10 +6,17 @@
   "prisma": {
     "schema": "src/prisma/schema.prisma"
   },
+  "pre-commit": [
+      "ts.check",
+      "build",
+      "add-build"
+  ],
   "scripts": {
-    "server": "tsnd --respawn -r tsconfig-paths/register --pretty --transpile-only ./src/index.ts",
-    "build": "npm i && tsc && tsc-alias && npm run prisma:generate",
-    "start": "node ./dist",
+    "start": "nodemon src/index.ts",
+  "build": "rimraf dist && tsc",
+  "ts.check": "tsc --project tsconfig.json",
+  "add-build": "git add dist",
+   
     "prisma:generate": "prisma generate"
   },
   "keywords": [],
@@ -36,8 +43,10 @@
     "passport": "^0.7.0",
     "passport-github2": "^0.1.12",
     "passport-google-oauth20": "^2.0.0",
+    "pre-commit": "^1.2.2",
     "prisma": "^5.16.2",
     "redis": "^4.7.0",
+    "rimraf": "^6.0.1",
     "socket.io": "^4.7.5",
     "typescript": "^5.5.3",
     "yup": "^1.4.0"
