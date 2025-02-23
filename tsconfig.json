@@ -30,7 +30,7 @@
       "outDir": "dist",
       "baseUrl": ".",
           "paths": {
-             "#/*": ["./src/*","./custom.d.ts"]
+             "#/*": ["./src/*"]
           }
   },
   "include": ["./src/**/*"]
