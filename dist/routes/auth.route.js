@@ -12,14 +12,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const rateLimit_1 = require("#/config/rateLimit");
-const auth_1 = require("#/controllers/auth");
-const authMiddleware_1 = require("#/middleware/authMiddleware");
-const validator_1 = require("#/middleware/validator");
-const validationSchema_1 = require("#/utils/validationSchema");
+const rateLimit_1 = require("../config/rateLimit");
+const auth_1 = require("../controllers/auth");
+const authMiddleware_1 = require("../middleware/authMiddleware");
+const validator_1 = require("../middleware/validator");
+const validationSchema_1 = require("../utils/validationSchema");
 const express_1 = require("express");
 const passport_1 = __importDefault(require("passport"));
-const createToken_1 = require("#/utils/createToken");
+const createToken_1 = require("../utils/createToken");
 const router = (0, express_1.Router)();
 // user
 router.post("/register", rateLimit_1.authLimiter, (0, validator_1.validate)(validationSchema_1.CreateUserSchema), auth_1.user_register);

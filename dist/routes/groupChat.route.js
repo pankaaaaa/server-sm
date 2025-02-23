@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const groupChat_1 = require("#/controllers/groupChat");
-const authMiddleware_1 = require("#/middleware/authMiddleware");
-const validator_1 = require("#/middleware/validator");
-const validationSchema_1 = require("#/utils/validationSchema");
+const groupChat_1 = require("../controllers/groupChat");
+const authMiddleware_1 = require("../middleware/authMiddleware");
+const validator_1 = require("../middleware/validator");
+const validationSchema_1 = require("../utils/validationSchema");
 const express_1 = require("express");
 const router = (0, express_1.Router)();
 router.post("/send-group-message/:chatId", authMiddleware_1.authMiddleware, groupChat_1.sendGroupMessage);

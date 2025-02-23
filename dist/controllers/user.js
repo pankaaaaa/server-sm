@@ -13,11 +13,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.seenNotification = exports.getMyNotificationsCount = exports.getMyNotifications = exports.getAllPeoples = exports.getUserFollowingList = exports.getUserFollowersList = exports.getDashboardPostActivityData = exports.getDashboardMessageSentData = exports.getDashboardData = exports.getUserPosts = exports.serachUser = exports.isFollow = exports.followUser = exports.getRecommendedUser = exports.getUser = void 0;
-const prisma_1 = __importDefault(require("#/prisma/prisma"));
-const response_1 = require("#/utils/response");
+const prisma_1 = __importDefault(require("../prisma/prisma"));
+const response_1 = require("../utils/response");
 const date_fns_1 = require("date-fns");
-const helper_1 = require("#/utils/helper");
-const socket_1 = require("#/socket/socket");
+const helper_1 = require("../utils/helper");
+const socket_1 = require("../socket/socket");
 const getUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
     const user = yield prisma_1.default.user.findUnique({

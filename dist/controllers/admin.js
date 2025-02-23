@@ -13,8 +13,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.changePassword = exports.deleteUser = exports.popularUsers = exports.getAllUsers = exports.getDashboardData = void 0;
-const prisma_1 = __importDefault(require("#/prisma/prisma"));
-const response_1 = require("#/utils/response");
+const prisma_1 = __importDefault(require("../prisma/prisma"));
+const response_1 = require("../utils/response");
 const date_fns_1 = require("date-fns");
 const getDashboardData = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {

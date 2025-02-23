@@ -13,9 +13,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updatePost = exports.deletePost = exports.toogleReplayedCommentReplyVote = exports.toogleCommentReplayVote = exports.toogleCommentVote = exports.addReplayToReplayComment = exports.addReplayComment = exports.getPostComment = exports.addComment = exports.isPostSaved = exports.getSavedPost = exports.toogleSavePost = exports.myPosts = exports.isVoted = exports.upOrDownVote = exports.getSinglePost = exports.getFeed = exports.createPost = void 0;
-const prisma_1 = __importDefault(require("#/prisma/prisma"));
-const cacheUtils_1 = require("#/utils/cacheUtils");
-const response_1 = require("#/utils/response");
+const prisma_1 = __importDefault(require("../prisma/prisma"));
+const cacheUtils_1 = require("../utils/cacheUtils");
+const response_1 = require("../utils/response");
 const createPost = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id: myId } = req.user;
     const { text, image, visibility } = req.body;

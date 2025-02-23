@@ -13,8 +13,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const GoogleStrategy = require("passport-google-oauth20");
-const prisma_1 = __importDefault(require("#/prisma/prisma"));
-const variables_1 = require("#/utils/variables");
+const prisma_1 = __importDefault(require("../prisma/prisma"));
+const variables_1 = require("../utils/variables");
 const bcrypt_1 = require("bcrypt");
 module.exports = function (passport) {
     passport.deserializeUser(function (id, done) {

@@ -7,7 +7,7 @@ exports.server = exports.io = exports.app = exports.getReceiverSocketIds = expor
 const socket_io_1 = require("socket.io");
 const http_1 = __importDefault(require("http"));
 const express_1 = __importDefault(require("express"));
-const variables_1 = require("#/utils/variables");
+const variables_1 = require("../utils/variables");
 const app = (0, express_1.default)();
 exports.app = app;
 const server = http_1.default.createServer(app);

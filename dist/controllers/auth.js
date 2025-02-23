@@ -14,9 +14,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.admin_get_user = exports.update_password = exports.update_user = exports.admin_login = exports.get_user = exports.user_login = exports.user_register = void 0;
 const bcrypt_1 = __importDefault(require("bcrypt"));
-const response_1 = require("#/utils/response");
-const prisma_1 = __importDefault(require("#/prisma/prisma"));
-const createToken_1 = require("#/utils/createToken");
+const response_1 = require("../utils/response");
+const prisma_1 = __importDefault(require("../prisma/prisma"));
+const createToken_1 = require("../utils/createToken");
 // user register @POST /api/auth/register
 const user_register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { name, email, password } = req.body;

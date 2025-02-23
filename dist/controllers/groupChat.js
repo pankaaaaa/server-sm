@@ -13,9 +13,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateGroupChat = exports.getGroupChatInfo = exports.getGroupChatMessage = exports.sendGroupMessage = exports.getUserGroupChats = exports.createGroupChat = void 0;
-const prisma_1 = __importDefault(require("#/prisma/prisma"));
-const socket_1 = require("#/socket/socket");
-const response_1 = require("#/utils/response");
+const prisma_1 = __importDefault(require("../prisma/prisma"));
+const socket_1 = require("../socket/socket");
+const response_1 = require("../utils/response");
 const createGroupChat = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id: myId } = req.user;
     const { users, title, avatar } = req.body;
